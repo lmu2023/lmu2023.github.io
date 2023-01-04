@@ -153,12 +153,12 @@ yat:
 #   - tags.html
 #   - about.md
 
- Page default value
- defaults:
-   home:
-     heading: "STOREIS"
-     subheading: "Spatial-Temporal Dynamics of Flood Resilience"
-     banner: "https://cms-cdn.lmu.de/media/newsroom-content-hub/photos/fluss_2_1_format_l.jpg"
+# Page default value
+# defaults:
+#   home:
+#     heading: "STOREIS"
+#     subheading: "Spatial-Temporal Dynamics of Flood Resilience"
+#     banner: "https://cms-cdn.lmu.de/media/newsroom-content-hub/photos/fluss_2_1_format_l.jpg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
