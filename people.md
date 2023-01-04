@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: people
 title: People
 
 - type: people.html
