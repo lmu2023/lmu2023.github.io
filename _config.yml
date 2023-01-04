@@ -48,7 +48,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.rediliencehub.info" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://www.resiliencehub.info" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
@@ -156,9 +156,9 @@ yat:
 # Page default value
 # defaults:
 #   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
-#     banner: "Your image url"
+#     heading: "STOREIS"
+#     subheading: "Spatial-Temporal Dynamics of Flood Resilience"
+#     banner: "https://cms-cdn.lmu.de/media/newsroom-content-hub/photos/fluss_2_1_format_l.jpg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
