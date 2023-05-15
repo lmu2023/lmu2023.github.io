@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "/assets/images/logo2.png"
+title: <img src="../assets/images/erc.png" width="100%">
 email:
 author:
 
