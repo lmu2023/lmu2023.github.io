@@ -47,3 +47,32 @@
     </div>
   </div>
 </header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;
+
+      {%- if banner and header_transparent -%}
+      documentElement.setAttribute("data-header-transparent", "");
+      {%- endif -%}
+
+      var scrollStatus = "";
+
+
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
