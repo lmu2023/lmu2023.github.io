@@ -25,7 +25,7 @@
   {%- endif -%}
   {%- if banner_height -%}
   <style>
-    {%- assign num = banner_height | times: 1 -%}
+    {%- assign num = banner_height | times: 0.1 -%}
     {%- assign unit = banner_height | replace_first: num -%}
     {%- assign banner_min_height = banner_min_height | default: banner_height -%}
     html .page-banner {
@@ -33,7 +33,7 @@
       min-height: {{ banner_min_height }};
     }
     html[data-scroll-status="top"] .page-banner {
-      height: 50%;
+      height: {{ banner_height }};
     }
   </style>
   {%- endif -%}
