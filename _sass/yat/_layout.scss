@@ -92,7 +92,7 @@ html {
 }
 
 .site-brand {
-  line-height: $header-height;
+
   margin-right: 50px;
 
   .site-brand-inner {
@@ -115,7 +115,7 @@ html {
 
 .site-nav {
   @include relative-font-size(1.125);
-  line-height: $header-height;
+  
   position: absolute;
   right: 0;
   top: 0;
@@ -226,7 +226,7 @@ html {
   .post-title {
     @include relative-font-size(2.625);
     letter-spacing: -1px;
-    line-height: 1;
+
 
     @include media-query($on-laptop) {
       @include relative-font-size(2.25);
@@ -512,7 +512,7 @@ html {
 
   a {
     @include relative-font-size(1.125);
-    line-height: 15px;
+
     color: #666;
     max-width: 50%;
   }
