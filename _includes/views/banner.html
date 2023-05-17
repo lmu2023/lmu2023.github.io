@@ -24,6 +24,7 @@
   </style>
   {%- endif -%}
   {%- if banner_height -%}
+  {% assign banner_height = 10 %}
   <style>
     {%- assign num = banner_height | times: 1 -%}
     {%- assign unit = banner_height | replace_first: num -%}
