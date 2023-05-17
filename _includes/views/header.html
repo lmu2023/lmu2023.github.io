@@ -31,8 +31,8 @@
               </svg>
             </span>
           </label>
-
-          <div class="trigger" style="background:#28707b">
+<div style="background:#28707b;width:200px; height:200px;">
+          <div class="trigger">
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
@@ -41,6 +41,7 @@
             {%- endfor -%}
 
 
+          </div>
           </div>
 
         </nav>
