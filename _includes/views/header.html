@@ -1,85 +1,265 @@
-
-{%- include functions.html func='get_banner' -%}
-
-{%- include functions.html func='log' level='debug' msg='Get header_transparent value' -%}
-{%- assign name = 'header_transparent' -%}
-{%- include functions.html func='get_value' default=true -%}
-{%- assign header_transparent = return -%}
-
-{%- if has_banner and header_transparent -%}
-  {%- assign header_transparent_class = "site-header-transparent" -%}
-{%- endif -%}
-
-<header class="site-header {{ header_transparent_class }}" role="banner">
-
-  <div class="wrapper">
-    <div class="site-header-inner">
-      {%- assign default_paths = site.pages | where: "dir", "/" | map: "path" -%}
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
-
-      <span class="site-brand">
-        {%- include views/site-brand.html -%}
-      </span>
-
-      {%- if page_paths -%}
-        <nav class="site-nav">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger">
-            <span class="menu-icon">
-              <svg viewBox="0 0 18 15" width="18px" height="15px">
-                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-              </svg>
-            </span>
-          </label>
-
-          <div class="trigger">
-            {%- for path in page_paths -%}
-              {%- assign my_page = site.pages | where: "path", path | first -%}
-              {%- if my_page.title -%}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | capitalize | escape }}</a>
-              {%- endif -%}
-            {%- endfor -%}
-
-
-          </div>
-        </nav>
-      {%- endif -%}
-    </div>
-  </div>
-</header>
-
-<script>
-  function initHeader() {
-    var lastScrollY = getScrollPos().y;
-    var documentElement = document.documentElement;
-
-    function storeScrollData() {
-      var y = getScrollPos().y;
-
-      {%- if banner and header_transparent -%}
-      documentElement.setAttribute("data-header-transparent", "");
-      {%- endif -%}
-
-      var scrollStatus = "";
-
-      if (y >= 0) {
-        scrollStatus = "top";
-      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
-        scrollStatus = "bottom";
-      } else {
-        var isScrollDown = (y - lastScrollY > 0) ? true : false;
-        scrollStatus = isScrollDown ? "down" : "up";
-      }
-
-      lastScrollY = y;
-      documentElement.setAttribute("data-scroll-status", scrollStatus);
-    }
-
-    window.addEventListener('scroll', function(e) {
-      storeScrollData();
-    });
-
-    storeScrollData();
-  }
-  document.addEventListener('DOMContentLoaded', initHeader);
-</script>
+<header data-elementor-type="header" data-elementor-id="163" data-post-id="286" data-obj-id="286" class="elementor elementor-163 dce-elementor-post-286 elementor-location-header">
+					<div class="elementor-section-wrap">
+								<section data-dce-background-color="#FFFFFF00" class="elementor-section elementor-top-section elementor-element elementor-element-6eff2578 elementor-section-stretched elementor-section-full_width elementor-section-content-top elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects" data-id="6eff2578" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;animation&quot;:&quot;none&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;_ha_eqh_enable&quot;:false,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}" style="position: fixed; margin-top: 0px; margin-bottom: 0px; top: 0px; width: 1746px; left: 0px;">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div data-dce-background-color="#FFFFFF00" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-293ba303" data-id="293ba303" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a48928e elementor-widget__width-auto elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="a48928e" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+								<a href="https://www.transcend-project.org">
+			<img width="800" height="800" src="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" class="attachment-1536x1536 size-1536x1536 wp-image-5035 entered lazyloaded" alt="" data-lazy-srcset="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 800w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 300w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 150w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" data-ll-status="loaded" sizes="(max-width: 800px) 100vw, 800px" srcset="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 800w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 300w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 150w"><noscript><img src="https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:1/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" width="800" height="800" sizes="(max-width: 800px) 100vw, 800px" data-srcset="https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 420w,https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 420w,https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 420w" data-wpc-loaded="true" class="wps-ic-live-cdn wps-ic-lazy-image wps-ic-loaded attachment-1536x1536 size-1536x1536 wp-image-5035" /></noscript>				</a>
+										</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div data-dce-background-color="#FFFFFF00" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-14ed9ac0" data-id="14ed9ac0" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0331d42 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu__align-right elementor-widget-tablet__width-auto elementor-hidden-tablet elementor-hidden-mobile elementor-widget__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="0331d42" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;fas fa-angle-down\&quot;><\/i>&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-0331d42" class="elementor-nav-menu" data-smartmenus-id="1684318054692063"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-286 current_page_item menu-item-772"><a href="https://www.transcend-project.org/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7210"><a href="/news/" class="elementor-item has-submenu" id="sm-1684318054692063-1" aria-haspopup="true" aria-controls="sm-1684318054692063-2" aria-expanded="false">News<span class="sub-arrow"><i class="fas fa-angle-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1684318054692063-2" role="group" aria-hidden="true" aria-labelledby="sm-1684318054692063-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7302"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5372"><a href="https://www.transcend-project.org/project/" class="elementor-item">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5472"><a href="https://www.transcend-project.org/team/" class="elementor-item">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5485"><a href="https://www.transcend-project.org/partners/" class="elementor-item">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6849"><a href="https://www.transcend-project.org/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5483"><a href="https://www.transcend-project.org/publications/" class="elementor-item">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="https://www.transcend-project.org/contact/" class="elementor-item">Contact</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="top: 43.9626px; --menu-height: 0; width: 1746px; left: 0px;">
+				<ul id="menu-2-0331d42" class="elementor-nav-menu" data-smartmenus-id="16843180546948"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-286 current_page_item menu-item-772"><a href="https://www.transcend-project.org/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7210"><a href="/news/" class="elementor-item has-submenu" tabindex="-1" id="sm-16843180546948-1" aria-haspopup="true" aria-controls="sm-16843180546948-2" aria-expanded="false">News<span class="sub-arrow"><i class="fas fa-angle-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180546948-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180546948-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7302"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item" tabindex="-1">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5372"><a href="https://www.transcend-project.org/project/" class="elementor-item" tabindex="-1">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5472"><a href="https://www.transcend-project.org/team/" class="elementor-item" tabindex="-1">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5485"><a href="https://www.transcend-project.org/partners/" class="elementor-item" tabindex="-1">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6849"><a href="https://www.transcend-project.org/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5483"><a href="https://www.transcend-project.org/publications/" class="elementor-item" tabindex="-1">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="https://www.transcend-project.org/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d8d80b2 elementor-search-form--skin-full_screen elementor-widget-tablet__width-auto elementor-hidden-tablet elementor-hidden-mobile elementor-widget__width-auto elementor-widget elementor-widget-search-form" data-id="d8d80b2" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.transcend-project.org" method="get">
+									<div class="elementor-search-form__toggle" tabindex="0" role="button">
+				<i aria-hidden="true" class="fas fa-search"></i>				<span class="elementor-screen-only">Search</span>
+			</div>
+						<div class="elementor-search-form__container">
+								<input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+																<div class="dialog-lightbox-close-button dialog-close-button">
+					<i aria-hidden="true" class="eicon-close"></i>					<span class="elementor-screen-only">Close</span>
+				</div>
+							</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-89ff14f elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu__align-right elementor-widget-tablet__width-auto elementor-hidden-desktop elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="89ff14f" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;\&quot;><\/i>&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-89ff14f" class="elementor-nav-menu" data-smartmenus-id="16843180547021296"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7234"><a href="/news/" class="elementor-item has-submenu" id="sm-16843180547021296-1" aria-haspopup="true" aria-controls="sm-16843180547021296-2" aria-expanded="false">News<span class="sub-arrow"><i class=""></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180547021296-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180547021296-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5965"><a href="https://www.transcend-project.org/project/" class="elementor-item">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5966"><a href="https://www.transcend-project.org/team/" class="elementor-item">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5967"><a href="https://www.transcend-project.org/partners/" class="elementor-item">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6850"><a href="https://www.transcend-project.org/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5969"><a href="https://www.transcend-project.org/publications/" class="elementor-item">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5970"><a href="https://www.transcend-project.org/contact/" class="elementor-item">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5971"><a href="https://www.transcend-project.org/imprint/" class="elementor-item">Imprint</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5964"><a href="https://www.transcend-project.org/privacy-policy/" class="elementor-item">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6237"><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1oF8IqFcYS9U7LFYEP74ibXk7hbw13m7p?usp=sharing" class="elementor-item">Internal Area</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="top: 0px; --menu-height: 0; width: 1746px; left: 0px;">
+				<ul id="menu-2-89ff14f" class="elementor-nav-menu" data-smartmenus-id="16843180547032908"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7234"><a href="/news/" class="elementor-item has-submenu" tabindex="-1" id="sm-16843180547032908-1" aria-haspopup="true" aria-controls="sm-16843180547032908-2" aria-expanded="false">News<span class="sub-arrow"><i class=""></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180547032908-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180547032908-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item" tabindex="-1">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5965"><a href="https://www.transcend-project.org/project/" class="elementor-item" tabindex="-1">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5966"><a href="https://www.transcend-project.org/team/" class="elementor-item" tabindex="-1">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5967"><a href="https://www.transcend-project.org/partners/" class="elementor-item" tabindex="-1">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6850"><a href="https://www.transcend-project.org/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5969"><a href="https://www.transcend-project.org/publications/" class="elementor-item" tabindex="-1">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5970"><a href="https://www.transcend-project.org/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5971"><a href="https://www.transcend-project.org/imprint/" class="elementor-item" tabindex="-1">Imprint</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5964"><a href="https://www.transcend-project.org/privacy-policy/" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6237"><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1oF8IqFcYS9U7LFYEP74ibXk7hbw13m7p?usp=sharing" class="elementor-item" tabindex="-1">Internal Area</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ecaebdf elementor-search-form--skin-full_screen elementor-widget-tablet__width-auto elementor-hidden-desktop elementor-widget elementor-widget-search-form" data-id="ecaebdf" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.transcend-project.org" method="get">
+									<div class="elementor-search-form__toggle" tabindex="0" role="button">
+				<i aria-hidden="true" class="fas fa-search"></i>				<span class="elementor-screen-only">Search</span>
+			</div>
+						<div class="elementor-search-form__container">
+								<input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+																<div class="dialog-lightbox-close-button dialog-close-button">
+					<i aria-hidden="true" class="eicon-close"></i>					<span class="elementor-screen-only">Close</span>
+				</div>
+							</div>
+		</form>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section><section data-dce-background-color="#FFFFFF00" class="elementor-section elementor-top-section elementor-element elementor-element-6eff2578 elementor-section-stretched elementor-section-full_width elementor-section-content-top elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky__spacer" data-id="6eff2578" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;animation&quot;:&quot;none&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;_ha_eqh_enable&quot;:false,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}" style="width: 1245px; left: 0px; visibility: hidden; transition: none 0s ease 0s; animation: 0s ease 0s 1 normal none running none;">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div data-dce-background-color="#FFFFFF00" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-293ba303" data-id="293ba303" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a48928e elementor-widget__width-auto elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="a48928e" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+								<a href="https://www.transcend-project.org">
+			<img width="800" height="800" src="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" class="attachment-1536x1536 size-1536x1536 wp-image-5035 entered lazyloaded" alt="" data-lazy-srcset="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 800w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 300w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 150w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" data-ll-status="loaded" sizes="(max-width: 800px) 100vw, 800px" srcset="https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 800w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 300w, https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 150w"><noscript><img src="https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:1/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png" width="800" height="800" sizes="(max-width: 800px) 100vw, 800px" data-srcset="https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent.png 420w,https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-300x300.png 420w,https://wwwtranscendprojecc7ff4.zapwp.com/q:i/r:0/wp:1/w:420/u:https://www.transcend-project.org/wp-content/uploads/2022/03/transcent-150x150.png 420w" data-wpc-loaded="true" class="wps-ic-live-cdn wps-ic-lazy-image wps-ic-loaded attachment-1536x1536 size-1536x1536 wp-image-5035" /></noscript>				</a>
+										</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div data-dce-background-color="#FFFFFF00" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-14ed9ac0" data-id="14ed9ac0" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0331d42 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu__align-right elementor-widget-tablet__width-auto elementor-hidden-tablet elementor-hidden-mobile elementor-widget__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="0331d42" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;fas fa-angle-down\&quot;><\/i>&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-0331d42" class="elementor-nav-menu" data-smartmenus-id="1684318054692063"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-286 current_page_item menu-item-772"><a href="https://www.transcend-project.org/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7210"><a href="/news/" class="elementor-item has-submenu" id="sm-1684318054692063-1" aria-haspopup="true" aria-controls="sm-1684318054692063-2" aria-expanded="false">News<span class="sub-arrow"><i class="fas fa-angle-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1684318054692063-2" role="group" aria-hidden="true" aria-labelledby="sm-1684318054692063-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7302"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5372"><a href="https://www.transcend-project.org/project/" class="elementor-item">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5472"><a href="https://www.transcend-project.org/team/" class="elementor-item">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5485"><a href="https://www.transcend-project.org/partners/" class="elementor-item">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6849"><a href="https://www.transcend-project.org/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5483"><a href="https://www.transcend-project.org/publications/" class="elementor-item">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="https://www.transcend-project.org/contact/" class="elementor-item">Contact</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="top: 0px; --menu-height: 0; width: 1245px; left: 0px;">
+				<ul id="menu-2-0331d42" class="elementor-nav-menu" data-smartmenus-id="16843180546948"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-286 current_page_item menu-item-772"><a href="https://www.transcend-project.org/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7210"><a href="/news/" class="elementor-item has-submenu" tabindex="-1" id="sm-16843180546948-1" aria-haspopup="true" aria-controls="sm-16843180546948-2" aria-expanded="false">News<span class="sub-arrow"><i class="fas fa-angle-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180546948-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180546948-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7302"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item" tabindex="-1">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5372"><a href="https://www.transcend-project.org/project/" class="elementor-item" tabindex="-1">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5472"><a href="https://www.transcend-project.org/team/" class="elementor-item" tabindex="-1">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5485"><a href="https://www.transcend-project.org/partners/" class="elementor-item" tabindex="-1">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6849"><a href="https://www.transcend-project.org/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5483"><a href="https://www.transcend-project.org/publications/" class="elementor-item" tabindex="-1">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="https://www.transcend-project.org/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d8d80b2 elementor-search-form--skin-full_screen elementor-widget-tablet__width-auto elementor-hidden-tablet elementor-hidden-mobile elementor-widget__width-auto elementor-widget elementor-widget-search-form" data-id="d8d80b2" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.transcend-project.org" method="get">
+									<div class="elementor-search-form__toggle" tabindex="0" role="button">
+				<i aria-hidden="true" class="fas fa-search"></i>				<span class="elementor-screen-only">Search</span>
+			</div>
+						<div class="elementor-search-form__container">
+								<input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+																<div class="dialog-lightbox-close-button dialog-close-button">
+					<i aria-hidden="true" class="eicon-close"></i>					<span class="elementor-screen-only">Close</span>
+				</div>
+							</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-89ff14f elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu__align-right elementor-widget-tablet__width-auto elementor-hidden-desktop elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="89ff14f" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;\&quot;><\/i>&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-89ff14f" class="elementor-nav-menu" data-smartmenus-id="16843180547021296"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7234"><a href="/news/" class="elementor-item has-submenu" id="sm-16843180547021296-1" aria-haspopup="true" aria-controls="sm-16843180547021296-2" aria-expanded="false">News<span class="sub-arrow"><i class=""></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180547021296-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180547021296-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5965"><a href="https://www.transcend-project.org/project/" class="elementor-item">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5966"><a href="https://www.transcend-project.org/team/" class="elementor-item">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5967"><a href="https://www.transcend-project.org/partners/" class="elementor-item">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6850"><a href="https://www.transcend-project.org/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5969"><a href="https://www.transcend-project.org/publications/" class="elementor-item">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5970"><a href="https://www.transcend-project.org/contact/" class="elementor-item">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5971"><a href="https://www.transcend-project.org/imprint/" class="elementor-item">Imprint</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5964"><a href="https://www.transcend-project.org/privacy-policy/" class="elementor-item">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6237"><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1oF8IqFcYS9U7LFYEP74ibXk7hbw13m7p?usp=sharing" class="elementor-item">Internal Area</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="top: 38.9855px; --menu-height: 0; width: 1245px; left: -1126.02px;">
+				<ul id="menu-2-89ff14f" class="elementor-nav-menu" data-smartmenus-id="16843180547032908"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7234"><a href="/news/" class="elementor-item has-submenu" tabindex="-1" id="sm-16843180547032908-1" aria-haspopup="true" aria-controls="sm-16843180547032908-2" aria-expanded="false">News<span class="sub-arrow"><i class=""></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16843180547032908-2" role="group" aria-hidden="true" aria-labelledby="sm-16843180547032908-1" aria-expanded="false">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="https://www.transcend-project.org/newsletter/" class="elementor-sub-item" tabindex="-1">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5965"><a href="https://www.transcend-project.org/project/" class="elementor-item" tabindex="-1">Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5966"><a href="https://www.transcend-project.org/team/" class="elementor-item" tabindex="-1">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5967"><a href="https://www.transcend-project.org/partners/" class="elementor-item" tabindex="-1">Partners</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-6850"><a href="https://www.transcend-project.org/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5969"><a href="https://www.transcend-project.org/publications/" class="elementor-item" tabindex="-1">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5970"><a href="https://www.transcend-project.org/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5971"><a href="https://www.transcend-project.org/imprint/" class="elementor-item" tabindex="-1">Imprint</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5964"><a href="https://www.transcend-project.org/privacy-policy/" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6237"><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1oF8IqFcYS9U7LFYEP74ibXk7hbw13m7p?usp=sharing" class="elementor-item" tabindex="-1">Internal Area</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ecaebdf elementor-search-form--skin-full_screen elementor-widget-tablet__width-auto elementor-hidden-desktop elementor-widget elementor-widget-search-form" data-id="ecaebdf" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.transcend-project.org" method="get">
+									<div class="elementor-search-form__toggle" tabindex="0" role="button">
+				<i aria-hidden="true" class="fas fa-search"></i>				<span class="elementor-screen-only">Search</span>
+			</div>
+						<div class="elementor-search-form__container">
+								<input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+																<div class="dialog-lightbox-close-button dialog-close-button">
+					<i aria-hidden="true" class="eicon-close"></i>					<span class="elementor-screen-only">Close</span>
+				</div>
+							</div>
+		</form>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+							</div>
+				</header>
