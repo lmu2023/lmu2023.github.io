@@ -18,7 +18,7 @@
 {%- if has_banner -%}
   {%- if banner_background -%}
   <style>
-    html .page-banner {
+    html .page-banner-other {
       background: {{ banner_background }};
     }
   </style>
@@ -28,35 +28,35 @@
 
   {%- if banner_opacity -%}
   <style>
-    html .page-banner .page-banner-img > *:first-child {
+    html .page-banner-other .page-banner-other-img > *:first-child {
       opacity: {{ banner_opacity }};
     }
 
-    html[data-theme="dark"] .page-banner .page-banner-img > *:first-child {
+    html[data-theme="dark"] .page-banner-other .page-banner-other-img > *:first-child {
       opacity: {{ banner_opacity | times: 0.718 }};
     }
   </style>
   {%- endif -%}
   {%- if banner_heading_style -%}
   <style>
-    html .page-banner .page-banner-inner > *:first-child > *:nth-child(1) {
+    html .page-banner-other .page-banner-other-inner > *:first-child > *:nth-child(1) {
       {{ banner_heading_style }}
     }
   </style>
   {%- endif -%}
   {%- if banner_subheading_style -%}
   <style>
-    html .page-banner .page-banner-inner > *:first-child > *:nth-child(2) {
+    html .page-banner-other .page-banner-other-inner > *:first-child > *:nth-child(2) {
       {{ banner_subheading_style }}
     }
   </style>
   {%- endif -%}
 
-  <section class="page-banner1" style="width:100%">
-    <div class="page-banner-img1">
+  <section class="page-banner-other" style="width:100%">
+    <div class="page-banner-img-other">
 
         <div style="background-image: url({{ banner_image }})"></div>
-        <img class="img-placeholder1" src="{{ banner_image }}">
+        <img class="img-placeholder-other" src="{{ banner_image }}">
 
       </div>
 
