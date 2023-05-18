@@ -115,7 +115,7 @@ html {
 
 .site-nav {
   @include relative-font-size(1.125);
-  
+
   position: absolute;
   right: 0;
   top: 0;
@@ -137,7 +137,7 @@ html {
     &:not(:last-child) {
       margin-right: 24px;
       &:hover {
-        text-decoration: underline;
+        text-decoration: blink;
       }
     }
   }
@@ -672,7 +672,7 @@ html {
         color: #fff;
 
         &:hover {
-          text-decoration: underline;
+          text-decoration: blink;
         }
       }
     }
