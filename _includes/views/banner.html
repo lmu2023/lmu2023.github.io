@@ -13,6 +13,11 @@
 {%- include functions.html func='get_value' -%}
 {% assign subheading = return %}
 
+{%- include functions.html func='log' level='debug' msg='Get subheading2 value' -%}
+{% assign name = 'subheading2' %}
+{%- include functions.html func='get_value' -%}
+{% assign subheading2 = return %}
+
 {%- include functions.html func='get_banner' -%}
 
 {%- if has_banner -%}
@@ -48,6 +53,14 @@
   <style>
     html .page-banner .page-banner-inner > *:first-child > *:nth-child(2) {
       {{ banner_subheading_style }}
+    }
+  </style>
+  {%- endif -%}
+
+  {%- if banner_subheading2_style -%}
+  <style>
+    html .page-banner .page-banner-inner > *:first-child > *:nth-child(2) {
+      {{ banner_subheading2_style }}
     }
   </style>
   {%- endif -%}
@@ -109,6 +122,9 @@
             </h1>
             <h2 class="page-banner-subheading">
               {{ subheading | default: page.subtitle | escape }}
+            </h2>
+            <h2 class="page-banner-subheading2">
+              {{ subheading2 | default: page.subtitle | escape }}
             </h2>
           </div>
 
