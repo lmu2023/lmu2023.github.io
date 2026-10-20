@@ -21,52 +21,48 @@ Interviews with community representatives highlighted the long history of living
 The field visit also demonstrated the close relationship between flood risk, fisheries, livelihoods, and river infrastructure. Fishing remains an important livelihood in communities along the Mekong, while local residents have observed substantial changes in fish populations and river ecosystems. During discussions around the **Pak Mun Dam**, which was constructed primarily for electricity generation, residents described differences between upstream and downstream fisheries and raised concerns about the ecological consequences of dams for fish migration and local livelihoods.
 The team also visited communities with more diversified livelihoods, including agriculture and small-scale food production. These observations illustrated how livelihood diversity and local knowledge can shape different capacities to live with recurring floods and environmental change
 
-
 <br>
 <div style="display: flex;">
-  <img src="/assets/images/content/STS2026-1.jpg" style="width: 49%;">
-  <img src="/assets/images/content/STS2026-2.jpg" style="width: 50%;">
+  <img src="/assets/images/content/Ubon-0.jpg" style="width: 49%;">
+  <img src="/assets/images/content/Ubon-1.jpg" style="width: 49%;">
+</div>
+
+<div style="display: flex;">
+  <img src="/assets/images/content/Ubon-2.jpg" style="width: 49%;">
+  <img src="/assets/images/content/Ubon-3.jpg" style="width: 49%;">
+</div>
+
+<div style="display: flex;">
+  <img src="/assets/images/content/Ubon-4.jpg" style="width: 80%;">
+</div>
+
+<div style="display: flex;">
+  <img src="/assets/images/content/Ubon-5.jpg" style="width: 80%;">
 </div>
 
 <br>
 
-**Hao Su** participated in the panel **“Biodiversity, Ecology and Nature-Based Solutions”**
-Presentation: Nature-Based Solutions for Flood Resilience in the Vietnamese Mekong Delta:  An Integrated Assessment Framework
-<br>
+# Fieldwork in Samut Sakhon
+The second part of the fieldwork focused on Samut Sakhon province, where coastal communities face severe challenges from coastal erosion, tidal flooding, mangrove degradation, and changing coastal livelihoods.
+The STORIES team exchanged with officials and researchers from the **Marine and Coastal Resources Research and Development Center, The Upper Gulf of Thailand,** gaining an overview of ongoing coastal-management strategies and the environmental changes observed along the Upper Gulf of Thailand.
+Field visits covered **traditional sea-salt production areas, mangrove restoration sites, and bamboo-fence projects used for coastal protection.** Salt production remains closely linked to seasonal environmental conditions. During the rainy season, some residents shift from salt production to fishing and collecting aquatic resources in and around the mangrove ecosystem.
+One of the main highlights was the visit to **community-based mangrove restoration areas.** Local residents began restoring mangroves in response to severe coastal erosion around two decades ago. Bamboo fences were introduced to reduce wave energy and facilitate sediment accumulation, creating more suitable conditions for mangrove establishment. At several locations, the remaining bamboo structures have gradually become integrated with accumulated sediment and the developing mangrove ecosystem.
+The field observations showed that mangrove restoration can generate benefits extending beyond coastal protection. Restored mangrove areas provide habitats for fish and other species, support local fisheries, and have created opportunities for ecotourism, restaurants, and cafés. Local community participation has played an important role in maintaining these restoration efforts and protecting coastal land for future generations, showing how local communities have a major impact on the success of sustainable pathways. Indeed, discussions with officials and communities demonstrated that the effectiveness of these measures depends strongly on a combination of local environmental conditions, community participation, governance, and long-term maintenance. Bamboo fences and mangrove restoration therefore provide an important example of how Nature-Based Solutions interact with local livelihoods and social conditions in practice.
+
 <div style="display: flex;">
-  <img src="/assets/images/content/STS2026-3.jpg" style="width: 49%;">
-  <img src="/assets/images/content/STS2026-4.jpg" style="width: 49%;">
+  <img src="/assets/images/content/Samut-0.jpg" style="width: 80%;">
 </div>
 
-<br>
-
-**Siying Chen, Thanh Phuoc Ho, and Pia Echtler**, participated in the panel **“Disaster, Risk and Resilience”** 
-Siying Chen — Presentation: Historical emergence of cascading flood impacts in Southwest China
-Thanh Phuoc Ho — Presentation: A Bayesian network analysis of the interactions of flood resilience measures in the Vietnamese Mekong Delta
-Pia Echtler — Presentation: Coastal resilience through scalable and replicable adaptation pathways
-<br>
 <div style="display: flex;">
-  <img src="/assets/images/content/STS2026-5.jpg" style="width: 80%;">
+  <img src="/assets/images/content/Samut-1.jpg" style="width: 80%;">
 </div>
 
-<br>
 <div style="display: flex;">
-  <img src="/assets/images/content/STS2026-6.jpg" style="width: 80%;">
+  <img src="/assets/images/content/Samut-2.jpg" style="width: 49%;">
+  <img src="/assets/images/content/Samut-3.jpg" style="width: 49%;">
 </div>
 
-<br>
 <div style="display: flex;">
-  <img src="/assets/images/content/STS2026-7.jpg" style="width: 80%;">
+  <img src="/assets/images/content/Samut-4.jpg" style="width: 49%;">
+  <img src="/assets/images/content/Samut-5.jpg" style="width: 50%;">
 </div>
-
-<br>
-<div style="display: flex;">
-  <img src="/assets/images/content/STS2026-8.jpg" style="width: 80%;">
-</div>
-
-<br>
-
-**Ylenia Casali** participated in the panel titled **"Climate Sustainability and Low-Carbon Futures"**, showcasing an integrated modelling framework for urban heat exposure aimed at enhancing climate-resilient planning.
-**Liang Emlyn Yang** served as the **moderator of the “Energy Transition”** panel
-
-The conference provided an opportunity to share ongoing research and engage with broader debates on resilience and sustainability, aligning the project's empirical outputs with international discourse on technology, ecosystems, and societal transformation. It was especially interesting to learn from different Asian universities how technologies are used to transfer sustainable and resilient transformations into contemporary social changes. Two main takeaways can be summarised. First,  the pathways for deploying technology to address resilience and sustainability remain largely unmapped, rendering technology transfer an evolving field of discourse. And second, technological deployment is inherently context-dependent, thus making local, regional and institutional perspectives and needs central in defining possible future uses.
